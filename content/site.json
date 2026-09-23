@@ -1,0 +1,68 @@
+{
+  "whatsOn": [
+    {
+      "id": "pizza",
+      "title": "Friday pizza",
+      "detail": "Tiago’s Pizza, 4:30–9pm. Eat in or takeaway."
+    },
+    {
+      "id": "quiz",
+      "title": "Quiz nights",
+      "detail": "Regular quiz nights. Ask at the bar for the next date."
+    },
+    {
+      "id": "wine",
+      "title": "Wine tasting",
+      "detail": "Evenings in the function room every three months."
+    },
+    {
+      "id": "festival",
+      "title": "Summer beer festival",
+      "detail": "Around twenty-five beers, held in June or July."
+    }
+  ],
+  "ales": [],
+  "quiz": {
+    "intro": "The Beehive hosts regular quiz nights — a friendly local evening for regulars and first-timers alike.",
+    "nextDate": "",
+    "time": "",
+    "notes": "Ask at the bar or check What’s On for the next date."
+  },
+  "food": {
+    "fridayPizza": "Tiago’s Pizza van is here every Friday, 4:30–9pm. Eat in or takeaway.",
+    "roasts": "Sunday roasts from April 2026."
+  },
+  "hours": [
+    { "day": "Monday", "hours": "3:00pm – 10:00pm" },
+    { "day": "Tuesday", "hours": "3:00pm – 10:00pm" },
+    { "day": "Wednesday", "hours": "3:00pm – 10:00pm" },
+    { "day": "Thursday", "hours": "3:00pm – 11:00pm" },
+    { "day": "Friday", "hours": "Noon – 11:00pm" },
+    { "day": "Saturday", "hours": "Noon – 11:00pm" },
+    { "day": "Sunday", "hours": "Noon – 10:00pm" }
+  ],
+  "contact": {
+    "addressLines": ["30 Leopold Road", "Norwich", "NR4 7PJ"],
+    "email": "alexbeehive@gmail.com",
+    "phone": "",
+    "website": "https://www.beehivepubnorwich.co.uk",
+    "location": "The Beehive is situated on Leopold Road, around half-way between Unthank Road and Newmarket Road, and about 200m south of the ring road (at Mile End Road).",
+    "mapQuery": "The Beehive, 30 Leopold Road, Norwich NR4 7PJ"
+  },
+  "gallery": [
+    { "src": "/photos/hero-exterior.jpg", "alt": "The Beehive on Leopold Road" },
+    { "src": "/photos/exterior-corner.jpg", "alt": "The Beehive corner and hanging sign" },
+    { "src": "/photos/exterior-umbrellas.jpg", "alt": "The Beehive with picnic tables" },
+    { "src": "/photos/exterior-snow.jpg", "alt": "The Beehive in the snow" },
+    { "src": "/photos/window-box-geraniums.jpg", "alt": "Window box on Leopold Road" },
+    { "src": "/photos/bar-pumps.jpg", "alt": "Real ale hand pumps" },
+    { "src": "/photos/beer-festival-casks.jpg", "alt": "Beer festival stillage" },
+    { "src": "/photos/garden-festival-crowd.jpg", "alt": "Beer garden during a festival" },
+    { "src": "/photos/charity-bbq.jpg", "alt": "Charity barbecue at The Beehive" },
+    { "src": "/photos/interior-fire-christmas.jpg", "alt": "The traditional bar and fireplace" },
+    { "src": "/photos/interior-snug-logo-mirror.jpg", "alt": "The snug with The Beehive mirror" },
+    { "src": "/photos/wine-tasting-cheese.jpg", "alt": "Wine tasting in the function room" },
+    { "src": "/photos/sunday-roast.jpg", "alt": "Sunday roast" },
+    { "src": "/photos/history-leopold-rd.jpg", "alt": "The Beehive on Leopold Road in earlier years" }
+  ]
+}
