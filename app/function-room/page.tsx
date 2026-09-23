@@ -15,9 +15,9 @@ export default async function FunctionRoomPage() {
       </PageHero>
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <p className="text-lg leading-8 text-muted">
-          The function room is situated on the first floor of the pub (walk
-          through the bar area on the left and take the stairs to your right
-          behind the bar).
+          The function room is situated on the first floor of this award-winning
+          pub (walk through the bar area on the left and take the stairs to
+          your right behind the bar).
         </p>
         <p className="mt-6 text-lg leading-8 text-muted">
           This room has additional seating, a pool table and dart board. It is

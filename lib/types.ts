@@ -38,5 +38,10 @@ export type SiteContent = {
     location: string;
     mapQuery: string;
   };
+  socials: {
+    facebook: string;
+    twitter: string;
+    camra: string;
+  };
   gallery: GalleryItem[];
 };

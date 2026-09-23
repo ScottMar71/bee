@@ -13,7 +13,8 @@ export default async function ContactPage() {
   return (
     <main id="main">
       <PageHero title="Contact" image="/photos/exterior-corner.jpg">
-        Leopold Road, Eaton — halfway between Unthank Road and Newmarket Road.
+        An award-winning real ale pub on Leopold Road, Eaton — halfway between
+        Unthank Road and Newmarket Road.
       </PageHero>
       <section className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2">
         <div>

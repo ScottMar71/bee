@@ -221,6 +221,27 @@ export function AdminForm({ initial }: { initial: SiteContent }) {
             setSite((s) => ({ ...s, contact: { ...s.contact, phone } }))
           }
         />
+        <Field
+          label="Facebook URL"
+          value={site.socials.facebook}
+          onChange={(facebook) =>
+            setSite((s) => ({ ...s, socials: { ...s.socials, facebook } }))
+          }
+        />
+        <Field
+          label="Twitter URL"
+          value={site.socials.twitter}
+          onChange={(twitter) =>
+            setSite((s) => ({ ...s, socials: { ...s.socials, twitter } }))
+          }
+        />
+        <Field
+          label="CAMRA URL"
+          value={site.socials.camra}
+          onChange={(camra) =>
+            setSite((s) => ({ ...s, socials: { ...s.socials, camra } }))
+          }
+        />
       </Section>
 
       <button

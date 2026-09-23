@@ -11,7 +11,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink/10 bg-cream/95 backdrop-blur">
+    <header className="sticky top-0 z-40 bg-black">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:bg-brick focus:px-3 focus:py-2 focus:text-cream"
@@ -21,7 +21,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="shrink-0" onClick={() => setOpen(false)}>
           <Image
-            src="/logo/beehive-logo.png"
+            src="/logo/beehive-logo-nav.jpg"
             alt="The Beehive Freehouse"
             width={140}
             height={126}
@@ -41,7 +41,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={`rounded-full px-3 py-2 text-sm tracking-wide transition hover:text-brick ${
-                  current ? "font-semibold text-brick" : "text-ink/80"
+                  current ? "font-semibold text-brick" : "text-white"
                 }`}
               >
                 {item.label}
@@ -52,16 +52,16 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-ink/15 bg-cream lg:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-white/25 bg-black lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
         >
           <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
           <span className="flex flex-col gap-1.5">
-            <span className="block h-0.5 w-5 bg-ink" />
-            <span className="block h-0.5 w-5 bg-ink" />
-            <span className="block h-0.5 w-5 bg-ink" />
+            <span className="block h-0.5 w-5 bg-white" />
+            <span className="block h-0.5 w-5 bg-white" />
+            <span className="block h-0.5 w-5 bg-white" />
           </span>
         </button>
       </div>
@@ -69,7 +69,7 @@ export function Header() {
       {open ? (
         <nav
           id="mobile-nav"
-          className="border-t border-ink/10 bg-cream px-4 py-4 lg:hidden"
+          className="border-t border-white/15 bg-black px-4 py-4 lg:hidden"
           aria-label="Mobile"
         >
           <ul className="flex flex-col gap-2">
@@ -78,7 +78,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block min-h-12 rounded-xl bg-cream-dark px-4 py-3 text-lg"
+                  className="block min-h-12 rounded-xl bg-white/10 px-4 py-3 text-lg text-white"
                 >
                   {item.label}
                 </Link>

@@ -12,7 +12,7 @@ export default async function QuizPage() {
   return (
     <main id="main">
       <PageHero title="Quiz" image="/photos/interior-snug-logo-mirror.jpg">
-        Regular quiz nights at a friendly Eaton local.
+        Regular quiz nights at an award-winning Eaton local.
       </PageHero>
       <section className="mx-auto max-w-2xl px-4 py-16 text-center sm:px-6">
         <p className="text-lg leading-8 text-muted">{quiz.intro}</p>

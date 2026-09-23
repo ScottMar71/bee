@@ -12,7 +12,8 @@ export default async function GalleryPage() {
   return (
     <main id="main">
       <PageHero title="Gallery" image="/photos/window-box-geraniums.jpg">
-        The pub, garden, bar and community events.
+        Life at an award-winning Eaton local — the pub, garden, bar and
+        community events.
       </PageHero>
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         {gallery.length === 0 ? (

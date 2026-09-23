@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | The Beehive Norwich",
   },
   description:
-    "A traditional English real ale pub in Eaton, Norwich, since 1892. Friendly local, function room, quiz nights and Friday pizza.",
+    "An award-winning traditional English real ale pub in Eaton, Norwich, since 1892. Friendly local, function room, quiz nights and Friday pizza.",
 };
 
 export default async function RootLayout({

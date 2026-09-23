@@ -12,7 +12,7 @@ export default async function FoodPage() {
   return (
     <main id="main">
       <PageHero title="Food" image="/photos/sunday-roast.jpg">
-        Friday pizza now. Sunday roasts from April 2026.
+        Friday pizza and Sunday roasts at an award-winning Eaton local.
       </PageHero>
       <section className="mx-auto grid max-w-5xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2">
         <article className="rounded-2xl bg-cream-dark p-8">

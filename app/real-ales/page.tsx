@@ -11,8 +11,8 @@ export default async function RealAlesPage() {
   return (
     <main id="main">
       <PageHero title="Real Ales" image="/photos/bar-pumps.jpg">
-        An excellent range from local and national brewers, plus lagers, cider
-        and bottled Belgian beers.
+        An award-winning range from local and national brewers, plus lagers,
+        cider and bottled Belgian beers.
       </PageHero>
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         {site.ales.length === 0 ? (

@@ -23,7 +23,7 @@
   ],
   "ales": [],
   "quiz": {
-    "intro": "The Beehive hosts regular quiz nights — a friendly local evening for regulars and first-timers alike.",
+    "intro": "The Beehive hosts regular quiz nights — a friendly evening at this award-winning Eaton local, for regulars and first-timers alike.",
     "nextDate": "",
     "time": "",
     "notes": "Ask at the bar or check What’s On for the next date."
@@ -49,8 +49,13 @@
     "location": "The Beehive is situated on Leopold Road, around half-way between Unthank Road and Newmarket Road, and about 200m south of the ring road (at Mile End Road).",
     "mapQuery": "The Beehive, 30 Leopold Road, Norwich NR4 7PJ"
   },
+  "socials": {
+    "facebook": "https://www.facebook.com/The-Beehive-Pub-Norwich-113272725363598/",
+    "twitter": "https://twitter.com/beehivenorwich",
+    "camra": "https://norwich.camra.org.uk/"
+  },
   "gallery": [
-    { "src": "/photos/hero-exterior.jpg", "alt": "The Beehive on Leopold Road" },
+    { "src": "/photos/hero-leopold-2.jpg", "alt": "The Beehive on Leopold Road" },
     { "src": "/photos/exterior-corner.jpg", "alt": "The Beehive corner and hanging sign" },
     { "src": "/photos/exterior-umbrellas.jpg", "alt": "The Beehive with picnic tables" },
     { "src": "/photos/exterior-snow.jpg", "alt": "The Beehive in the snow" },

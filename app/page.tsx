@@ -14,39 +14,62 @@ export default async function HomePage() {
     <main id="main">
       <section className="relative isolate min-h-[88vh] overflow-hidden">
         <Image
-          src="/photos/hero-exterior.jpg"
+          src="/photos/hero-leopold-2.jpg"
           alt="The Beehive pub on Leopold Road, Norwich"
           fill
           priority
-          className="object-cover object-[50%_70%]"
+          className="z-0 object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-ink/10" />
-        <div className="relative mx-auto flex min-h-[88vh] max-w-4xl flex-col items-center justify-end px-4 pb-10 text-center sm:pb-14">
-          <div className="rise w-full max-w-xl rounded-3xl bg-ink/55 px-6 py-8 backdrop-blur-sm sm:px-10">
-            <p className="text-sm tracking-[0.28em] text-cream/90 uppercase">
-              Eaton, Norwich · since 1892
-            </p>
-            <h1 className="font-display mt-3 text-5xl text-cream sm:text-6xl">
-              The Beehive
-            </h1>
-            <p className="mt-4 text-lg text-cream/90">
-              A traditional English real ale pub that has been trading in Norwich
-              since 1892.
-            </p>
-            <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
-              <ButtonLink href="#whats-on">What’s on</ButtonLink>
-              <ButtonLink href="/contact" variant="secondary">
-                Find us
-              </ButtonLink>
-            </div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-ink/55 via-transparent to-ink/10" />
+        <h1 className="sr-only">The Beehive</h1>
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-6">
+          <div className="flex h-56 w-56 items-center justify-center rounded-full bg-black shadow-2xl sm:h-72 sm:w-72">
+            <Image
+              src="/beehive-logo-white.png"
+              alt=""
+              width={260}
+              height={235}
+              className="h-40 w-auto sm:h-52"
+              priority
+            />
           </div>
+        </div>
+        <div className="absolute inset-x-0 bottom-0 z-20 flex flex-col items-center px-4 pb-8 text-center sm:pb-10">
+          <p className="text-sm tracking-[0.28em] text-cream/90 uppercase">
+            Award-winning · Eaton, Norwich · since 1892
+          </p>
+          <a
+            href="#welcome"
+            className="mt-5 inline-flex h-14 w-14 items-center justify-center rounded-full border border-cream/70 text-cream transition hover:bg-cream hover:text-ink"
+            aria-label="Scroll down"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="h-7 w-7"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </a>
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 py-20 text-center sm:px-6">
+      <section
+        id="welcome"
+        className="mx-auto max-w-3xl scroll-mt-24 px-4 py-20 text-center sm:px-6"
+      >
         <SectionHeading eyebrow="Welcome">Welcome</SectionHeading>
         <p className="mt-8 text-lg leading-8 text-muted">
+          An award-winning traditional English real ale pub that has been
+          trading in Norwich since 1892.
+        </p>
+        <p className="mt-6 text-lg leading-8 text-muted">
           The Beehive Pub in Eaton, Norwich offers a friendly and relaxed
           atmosphere in which to enjoy a drink and socialise, with customers
           from all ages. The pub prides itself on featuring an excellent range
