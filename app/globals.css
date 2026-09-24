@@ -51,6 +51,19 @@ body {
     opacity: 1 !important;
     transform: none !important;
   }
+
+  .gallery-float,
+  .gallery-caption,
+  .gallery-zoom {
+    transform: none !important;
+  }
+
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
 }
 
 @media (scripting: none) {
@@ -139,4 +152,63 @@ body {
 
 .cta:active {
   transform: translateY(0);
+}
+
+@keyframes gallery-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.gallery-fade {
+  animation: gallery-fade 0.35s ease;
+}
+
+.gallery-zoom {
+  transition: transform 0.7s ease;
+}
+
+.group:hover .gallery-zoom,
+.group:focus-visible .gallery-zoom {
+  transform: scale(1.04);
+}
+
+::view-transition {
+  pointer-events: none;
+}
+
+::view-transition-group(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+::view-transition-old(root) {
+  display: none;
+}
+
+::view-transition-group(page) {
+  animation: none;
+}
+
+::view-transition-old(.page) {
+  animation: 120ms ease-out both page-fade-out;
+}
+
+::view-transition-new(.page) {
+  animation: 160ms ease-out both page-fade-in;
+}
+
+@keyframes page-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
 }

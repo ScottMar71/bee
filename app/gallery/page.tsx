@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { GalleryGrid } from "@/components/GalleryGrid";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { getSite } from "@/lib/site";
@@ -31,22 +31,7 @@ export default async function GalleryPage() {
             .
           </p>
         ) : (
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {gallery.map((item) => (
-              <li
-                key={item.src}
-                className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-cream-dark"
-              >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                />
-              </li>
-            ))}
-          </ul>
+          <GalleryGrid items={gallery} />
         )}
       </section>
       </Reveal>
