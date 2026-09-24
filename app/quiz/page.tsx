@@ -15,8 +15,8 @@ export default async function QuizPage() {
     <main id="main">
       <PageHero
         title="Quiz Night at The Beehive"
-        image="/photos/interior-snug-logo-mirror.jpg"
-        imageClassName="object-cover object-[center_10%]"
+        image="/photos/quiz-hero.jpg"
+        imageClassName="object-cover object-center"
       >
         Put your general knowledge to the test every week at The Beehive.
       </PageHero>
