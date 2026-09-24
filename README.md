@@ -20,4 +20,6 @@ Open [http://localhost:3000](http://localhost:3000). Owner updates: [http://loca
 3. Set env vars: `ADMIN_PASSWORD`, `ADMIN_SECRET`, `GITHUB_TOKEN` (repo contents write), `GITHUB_REPO=ScottMar71/bee`.
 4. After a save in `/admin`, Vercel rebuilds from the commit (usually under a minute).
 
+The contact form emails `alexbeehive@gmail.com`. Without `RESEND_API_KEY` it uses FormSubmit (first send asks that inbox to confirm once).
+
 No paid third-party tools. Phone number is hidden until added in admin.

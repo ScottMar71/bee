@@ -103,16 +103,16 @@ export default async function HomePage() {
             copy: "Local and national brewers, plus lager, cider and Belgian bottles.",
           },
           {
+            href: "/food",
+            src: "/photos/sunday-roast-plate.jpg",
+            title: "Food",
+            copy: "Friday pizza and Sunday roasts at the pub.",
+          },
+          {
             href: "/function-room",
             src: "/photos/wine-tasting-cheese.jpg",
             title: "Function room",
             copy: "Upstairs for parties, clubs, societies and meetings.",
-          },
-          {
-            href: "/gallery",
-            src: "/photos/garden-festival-crowd.jpg",
-            title: "Garden & festivals",
-            copy: "A large beer garden, charity barbecue and a summer beer festival.",
           },
         ].map((card) => (
           <Link

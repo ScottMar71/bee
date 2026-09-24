@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ContactForm } from "@/components/ContactForm";
 import { HoursList } from "@/components/HoursList";
 import { PageHero } from "@/components/PageHero";
 import { getSite, mapEmbedUrl } from "@/lib/site";
@@ -68,6 +69,17 @@ export default async function ContactPage() {
               Open in Google Maps
             </a>
           </p>
+        </div>
+      </section>
+      <section className="bg-cream-dark py-16">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+          <h2 className="font-display text-4xl">Send a message</h2>
+          <p className="mt-4 text-lg leading-8 text-muted">
+            Drop us a line and we’ll get back to you as soon as we can.
+          </p>
+          <div className="mt-8">
+            <ContactForm />
+          </div>
         </div>
       </section>
     </main>
