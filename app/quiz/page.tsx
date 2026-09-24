@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { getSite } from "@/lib/site";
@@ -32,6 +33,15 @@ export default async function QuizPage() {
           There’s no need to be a quiz whizz — it’s all about getting together,
           having a good time and seeing how many answers you can come up with!
         </p>
+        <figure className="mx-auto mt-10 max-w-md">
+          <Image
+            src="/photos/quiz-night.jpg"
+            alt="Quiz night at The Beehive, with the host at the microphone"
+            width={768}
+            height={1024}
+            className="h-auto w-full rounded-2xl"
+          />
+        </figure>
         <p className="mt-6 text-lg leading-8 text-muted">
           As an award-winning local pub in Eaton, The Beehive is the perfect
           place to spend a midweek evening. Grab a drink, settle in with your

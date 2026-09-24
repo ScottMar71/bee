@@ -37,7 +37,11 @@ export default async function RealAlesPage() {
 
   return (
     <main id="main">
-      <PageHero title="Real Ales" image="/photos/bar-pumps.jpg">
+      <PageHero
+        title="Real Ales"
+        image="/photos/real-ales-hero.jpg"
+        imageClassName="object-cover object-[center_62%]"
+      >
         An award-winning range from local and national brewers, plus lagers,
         cider and bottled Belgian beers.
       </PageHero>
