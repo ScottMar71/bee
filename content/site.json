@@ -9,16 +9,6 @@
       "id": "quiz",
       "title": "Quiz nights",
       "detail": "Regular quiz nights. Ask at the bar for the next date."
-    },
-    {
-      "id": "wine",
-      "title": "Wine tasting",
-      "detail": "Evenings in the function room every three months."
-    },
-    {
-      "id": "festival",
-      "title": "Summer beer festival",
-      "detail": "Around twenty-five beers, held in June or July."
     }
   ],
   "ales": [],
@@ -33,16 +23,41 @@
     "roasts": "A proper Sunday roast, with all the trimmings."
   },
   "hours": [
-    { "day": "Monday", "hours": "3:00pm – 10:00pm" },
-    { "day": "Tuesday", "hours": "3:00pm – 10:00pm" },
-    { "day": "Wednesday", "hours": "3:00pm – 10:00pm" },
-    { "day": "Thursday", "hours": "3:00pm – 11:00pm" },
-    { "day": "Friday", "hours": "Noon – 11:00pm" },
-    { "day": "Saturday", "hours": "Noon – 11:00pm" },
-    { "day": "Sunday", "hours": "Noon – 10:00pm" }
+    {
+      "day": "Monday",
+      "hours": "3:00pm – 10:00pm"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "3:00pm – 10:00pm"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "3:00pm – 10:00pm"
+    },
+    {
+      "day": "Thursday",
+      "hours": "3:00pm – 11:00pm"
+    },
+    {
+      "day": "Friday",
+      "hours": "Noon – 11:00pm"
+    },
+    {
+      "day": "Saturday",
+      "hours": "Noon – 11:00pm"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Noon – 10:00pm"
+    }
   ],
   "contact": {
-    "addressLines": ["30 Leopold Road", "Norwich", "NR4 7PJ"],
+    "addressLines": [
+      "30 Leopold Road",
+      "Norwich",
+      "NR4 7PJ"
+    ],
     "email": "beehivephnorwich@gmail.com",
     "phone": "",
     "website": "https://www.beehivepubnorwich.co.uk",
@@ -55,24 +70,81 @@
     "camra": "https://norwich.camra.org.uk/"
   },
   "gallery": [
-    { "src": "/photos/hero-leopold-2.jpg", "alt": "The Beehive on Leopold Road" },
-    { "src": "/photos/exterior-umbrellas.jpg", "alt": "The Beehive with picnic tables" },
-    { "src": "/photos/exterior-snow.jpg", "alt": "The Beehive in the snow" },
-    { "src": "/photos/window-box-geraniums.jpg", "alt": "Window box on Leopold Road" },
-    { "src": "/photos/bar-pumps.jpg", "alt": "Real ale hand pumps" },
-    { "src": "/photos/beer-festival-casks.jpg", "alt": "Beer festival stillage" },
-    { "src": "/photos/garden-festival-crowd.jpg", "alt": "Beer garden during a festival" },
-    { "src": "/photos/charity-bbq.jpg", "alt": "Charity barbecue at The Beehive" },
-    { "src": "/photos/interior-fire-christmas.jpg", "alt": "The traditional bar and fireplace" },
-    { "src": "/photos/interior-snug-logo-mirror.jpg", "alt": "The snug with The Beehive mirror" },
-    { "src": "/photos/wine-tasting-cheese.jpg", "alt": "Wine tasting in the function room" },
-    { "src": "/photos/history-leopold-rd.jpg", "alt": "The Beehive on Leopold Road in earlier years" },
-    { "src": "/photos/dessert-brownie.jpg", "alt": "Brownie with ice cream" },
-    { "src": "/photos/barbecue-team.jpg", "alt": "The barbecue team at The Beehive" },
-    { "src": "/photos/charity-cheque.jpg", "alt": "A charity cheque presentation at The Beehive" },
-    { "src": "/photos/food-hygiene-rating.jpg", "alt": "Food hygiene rating of 5, very good" },
-    { "src": "/photos/fireplace-autumn.jpg", "alt": "The fireplace in autumn" },
-    { "src": "/photos/garden-evening.jpg", "alt": "Customers in the beer garden in the evening" },
-    { "src": "/photos/garden-gathering.jpg", "alt": "A gathering in the beer garden" }
+    {
+      "src": "/photos/hero-leopold-2.jpg",
+      "alt": "The Beehive on Leopold Road"
+    },
+    {
+      "src": "/photos/exterior-umbrellas.jpg",
+      "alt": "The Beehive with picnic tables"
+    },
+    {
+      "src": "/photos/exterior-snow.jpg",
+      "alt": "The Beehive in the snow"
+    },
+    {
+      "src": "/photos/window-box-geraniums.jpg",
+      "alt": "Window box on Leopold Road"
+    },
+    {
+      "src": "/photos/bar-pumps.jpg",
+      "alt": "Real ale hand pumps"
+    },
+    {
+      "src": "/photos/beer-festival-casks.jpg",
+      "alt": "Beer festival stillage"
+    },
+    {
+      "src": "/photos/garden-festival-crowd.jpg",
+      "alt": "Beer garden during a festival"
+    },
+    {
+      "src": "/photos/charity-bbq.jpg",
+      "alt": "Charity barbecue at The Beehive"
+    },
+    {
+      "src": "/photos/interior-fire-christmas.jpg",
+      "alt": "The traditional bar and fireplace"
+    },
+    {
+      "src": "/photos/interior-snug-logo-mirror.jpg",
+      "alt": "The snug with The Beehive mirror"
+    },
+    {
+      "src": "/photos/wine-tasting-cheese.jpg",
+      "alt": "Wine tasting in the function room"
+    },
+    {
+      "src": "/photos/history-leopold-rd.jpg",
+      "alt": "The Beehive on Leopold Road in earlier years"
+    },
+    {
+      "src": "/photos/dessert-brownie.jpg",
+      "alt": "Brownie with ice cream"
+    },
+    {
+      "src": "/photos/barbecue-team.jpg",
+      "alt": "The barbecue team at The Beehive"
+    },
+    {
+      "src": "/photos/charity-cheque.jpg",
+      "alt": "A charity cheque presentation at The Beehive"
+    },
+    {
+      "src": "/photos/food-hygiene-rating.jpg",
+      "alt": "Food hygiene rating of 5, very good"
+    },
+    {
+      "src": "/photos/fireplace-autumn.jpg",
+      "alt": "The fireplace in autumn"
+    },
+    {
+      "src": "/photos/garden-evening.jpg",
+      "alt": "Customers in the beer garden in the evening"
+    },
+    {
+      "src": "/photos/garden-gathering.jpg",
+      "alt": "A gathering in the beer garden"
+    }
   ]
 }
