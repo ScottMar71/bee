@@ -22,8 +22,12 @@ export function AdminForm({ initial }: { initial: SiteContent }) {
     setBusy(true);
     setStatus("");
     try {
-      await saveSiteAction(site);
-      setStatus("Saved. The public pages will update in a moment.");
+      const result = await saveSiteAction(site);
+      setStatus(
+        result.ok
+          ? "Saved. The public pages will update in a moment."
+          : result.error,
+      );
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "Could not save.");
     } finally {
@@ -266,7 +270,11 @@ export function AdminForm({ initial }: { initial: SiteContent }) {
                 type="button"
                 className="text-brick"
                 onClick={async () => {
-                  await deletePhotoAction(item.src);
+                  const result = await deletePhotoAction(item.src);
+                  if (!result.ok) {
+                    setStatus(result.error);
+                    return;
+                  }
                   setSite((s) => ({
                     ...s,
                     gallery: s.gallery.filter((row) => row.src !== item.src),
@@ -283,7 +291,11 @@ export function AdminForm({ initial }: { initial: SiteContent }) {
           action={async (formData) => {
             setBusy(true);
             try {
-              await uploadPhotoAction(formData);
+              const result = await uploadPhotoAction(formData);
+              if (!result.ok) {
+                setStatus(result.error);
+                return;
+              }
               window.location.reload();
             } catch (error) {
               setStatus(

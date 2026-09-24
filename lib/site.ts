@@ -21,6 +21,12 @@ export async function saveSite(site: SiteContent) {
     return;
   }
 
+  if (process.env.VERCEL) {
+    throw new Error(
+      "GITHUB_TOKEN is not set, so the live site cannot save changes.",
+    );
+  }
+
   await fs.writeFile(SITE_PATH, json, "utf8");
 }
 
