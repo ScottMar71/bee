@@ -56,7 +56,6 @@
   },
   "gallery": [
     { "src": "/photos/hero-leopold-2.jpg", "alt": "The Beehive on Leopold Road" },
-    { "src": "/photos/exterior-corner.jpg", "alt": "The Beehive corner and hanging sign" },
     { "src": "/photos/exterior-umbrellas.jpg", "alt": "The Beehive with picnic tables" },
     { "src": "/photos/exterior-snow.jpg", "alt": "The Beehive in the snow" },
     { "src": "/photos/window-box-geraniums.jpg", "alt": "Window box on Leopold Road" },
@@ -67,16 +66,13 @@
     { "src": "/photos/interior-fire-christmas.jpg", "alt": "The traditional bar and fireplace" },
     { "src": "/photos/interior-snug-logo-mirror.jpg", "alt": "The snug with The Beehive mirror" },
     { "src": "/photos/wine-tasting-cheese.jpg", "alt": "Wine tasting in the function room" },
-    { "src": "/photos/sunday-roast.jpg", "alt": "Sunday roast" },
     { "src": "/photos/history-leopold-rd.jpg", "alt": "The Beehive on Leopold Road in earlier years" },
     { "src": "/photos/dessert-brownie.jpg", "alt": "Brownie with ice cream" },
-    { "src": "/photos/hanging-sign-night.jpg", "alt": "The Beehive hanging sign at night" },
     { "src": "/photos/barbecue-team.jpg", "alt": "The barbecue team at The Beehive" },
     { "src": "/photos/charity-cheque.jpg", "alt": "A charity cheque presentation at The Beehive" },
     { "src": "/photos/food-hygiene-rating.jpg", "alt": "Food hygiene rating of 5, very good" },
     { "src": "/photos/fireplace-autumn.jpg", "alt": "The fireplace in autumn" },
     { "src": "/photos/garden-evening.jpg", "alt": "Customers in the beer garden in the evening" },
-    { "src": "/photos/garden-gathering.jpg", "alt": "A gathering in the beer garden" },
-    { "src": "/photos/humpty-dumpty-herald.jpg", "alt": "A Humpty Dumpty brewery poster" }
+    { "src": "/photos/garden-gathering.jpg", "alt": "A gathering in the beer garden" }
   ]
 }
