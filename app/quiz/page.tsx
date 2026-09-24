@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ButtonLink } from "@/components/ButtonLink";
+import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { getSite } from "@/lib/site";
 
@@ -11,22 +11,65 @@ export default async function QuizPage() {
 
   return (
     <main id="main">
-      <PageHero title="Quiz" image="/photos/interior-snug-logo-mirror.jpg">
-        Regular quiz nights at an award-winning Eaton local.
+      <PageHero title="Quiz Night at The Beehive" image="/photos/interior-snug-logo-mirror.jpg">
+        Put your general knowledge to the test every week at The Beehive.
       </PageHero>
-      <section className="mx-auto max-w-2xl px-4 py-16 text-center sm:px-6">
-        <p className="text-lg leading-8 text-muted">{quiz.intro}</p>
-        {quiz.nextDate ? (
-          <p className="font-display mt-8 text-3xl">
-            Next quiz: {quiz.nextDate}
-            {quiz.time ? ` · ${quiz.time}` : ""}
+
+      <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+        <p className="text-lg leading-8 text-muted">
+          Join us for our regular quiz night — a relaxed, friendly evening of
+          questions, laughs, drinks and a bit of healthy competition.
+        </p>
+        <p className="mt-6 text-lg leading-8 text-muted">
+          Whether you’re a quiz regular, a self-confessed trivia expert, or
+          simply looking for a fun night out, everyone is welcome. Bring along
+          your friends, family or colleagues, put a team together and see how
+          you fare across a mix of questions covering everything from music and
+          film to sport, history, general knowledge and plenty of surprises
+          along the way.
+        </p>
+        <p className="mt-6 text-lg leading-8 text-muted">
+          There’s no need to be a quiz whizz — it’s all about getting together,
+          having a good time and seeing how many answers you can come up with!
+        </p>
+        <p className="mt-6 text-lg leading-8 text-muted">
+          As an award-winning local pub in Eaton, The Beehive is the perfect
+          place to spend a midweek evening. Grab a drink, settle in with your
+          team and enjoy the atmosphere while you battle it out for quiz-night
+          glory.
+        </p>
+      </article>
+
+      <section className="bg-cream-dark py-16">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+          <h2 className="font-display text-4xl">When is the next quiz?</h2>
+          {quiz.nextDate ? (
+            <p className="font-display mt-8 text-3xl">
+              Next quiz: {quiz.nextDate}
+              {quiz.time ? ` · ${quiz.time}` : ""}
+            </p>
+          ) : (
+            <p className="mt-8 text-lg leading-8 text-muted">
+              Our quiz nights take place regularly at The Beehive.
+            </p>
+          )}
+          <p className="mt-6 text-lg leading-8 text-muted">
+            Ask at the bar or check our{" "}
+            <Link
+              href="/#whats-on"
+              className="text-brick underline-offset-2 hover:underline"
+            >
+              What’s On
+            </Link>{" "}
+            page for the next quiz date.
           </p>
-        ) : null}
-        <p className="mt-6 text-muted">{quiz.notes}</p>
-        <div className="mt-10 flex justify-center">
-          <ButtonLink href="/contact" variant="ghost">
-            Ask us
-          </ButtonLink>
+          <p className="mt-6 text-lg leading-8 text-muted">
+            Gather your team, bring your best general knowledge and we’ll see
+            you at The Beehive!
+          </p>
+          <p className="font-display mt-10 text-2xl">
+            Everyone welcome. Teams encouraged. Bragging rights guaranteed.
+          </p>
         </div>
       </section>
     </main>

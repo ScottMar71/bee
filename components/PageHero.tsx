@@ -25,7 +25,9 @@ export function PageHero({
       />
       <div className={`absolute inset-0 ${overlayClassName}`} />
       <div className="relative mx-auto flex min-h-[42vh] max-w-4xl flex-col items-center justify-center px-4 py-16 text-center">
-        <h1 className="font-display text-5xl text-cream sm:text-6xl">{title}</h1>
+        <h1 className="font-display w-full min-w-0 text-balance text-5xl leading-tight text-cream sm:text-6xl">
+          {title}
+        </h1>
         {children ? (
           <p className="mt-4 max-w-2xl text-lg text-cream/90">{children}</p>
         ) : null}
