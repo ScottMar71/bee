@@ -193,9 +193,6 @@ export default function HistoryPage() {
           and summer months. A popular beer festival with around twenty-five
           beers is held in June or July.
         </p>
-        <p className="mt-6 text-lg leading-8 text-muted">
-          Sunday roasts are available from April 2026.
-        </p>
       </article>
       </Reveal>
     </main>

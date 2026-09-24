@@ -2,13 +2,29 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { getSite } from "@/lib/site";
+
+const SUNDAY_PHOTOS = [
+  {
+    src: "/photos/sunday-lunch-window.jpg",
+    alt: "Sunday roast and cauliflower cheese by the window",
+  },
+  {
+    src: "/photos/sunday-brownie.jpg",
+    alt: "Brownie with ice cream",
+  },
+  {
+    src: "/photos/sunday-roast-line.jpg",
+    alt: "A row of Sunday roasts",
+  },
+  {
+    src: "/photos/sunday-lunch-table.jpg",
+    alt: "Sunday roast with cauliflower cheese",
+  },
+];
 
 export const metadata: Metadata = { title: "Food" };
-export const dynamic = "force-dynamic";
 
-export default async function FoodPage() {
-  const { food } = await getSite();
+export default function FoodPage() {
 
   return (
     <main id="main">
@@ -61,12 +77,54 @@ export default async function FoodPage() {
           </article>
         </Reveal>
         <Reveal delay={90}>
-          <article className="mt-10 max-w-xl rounded-2xl bg-cream-dark p-8">
-            <p className="text-xs font-semibold tracking-[0.2em] text-brick uppercase">
-              From April 2026
-            </p>
-            <h2 className="font-display mt-2 text-3xl">Sunday roasts</h2>
-            <p className="mt-4 text-lg leading-8 text-muted">{food.roasts}</p>
+          <article className="mt-16 grid items-center gap-10 border-t border-cream-dark pt-16 md:grid-cols-2">
+            <div>
+              <p className="text-xs font-semibold tracking-[0.2em] text-brick uppercase">
+                Every Sunday
+              </p>
+              <h2 className="font-display mt-2 text-4xl">
+                Sunday Lunch at The Beehive
+              </h2>
+              <div className="mt-6 space-y-6 text-lg leading-8 text-muted">
+                <p>There’s something special about a Sunday lunch at The Beehive.</p>
+                <p>
+                  Settle in, relax and enjoy a proper Sunday roast in a
+                  welcoming pub atmosphere. Whether you’re catching up with
+                  family, meeting friends or simply looking for a good excuse
+                  to make Sunday feel like Sunday, our roast is made for taking
+                  your time over.
+                </p>
+                <p>
+                  Expect generous portions, traditional favourites and all the
+                  trimmings – beautifully roasted meat, crispy roast potatoes,
+                  seasonal vegetables, rich gravy and all the things that make
+                  a Sunday lunch worth looking forward to.
+                </p>
+                <p>
+                  And, of course, there’s no need to rush. Enjoy a drink from
+                  the bar, settle into the pub and make an afternoon of it.
+                </p>
+                <p className="font-display text-2xl text-ink">
+                  Good food. Good company. A proper Sunday.
+                </p>
+              </div>
+            </div>
+            <ul className="grid grid-cols-2 gap-3">
+              {SUNDAY_PHOTOS.map((photo) => (
+                <li
+                  key={photo.src}
+                  className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-cream-dark"
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 20rem, 45vw"
+                  />
+                </li>
+              ))}
+            </ul>
           </article>
         </Reveal>
       </section>
