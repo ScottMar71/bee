@@ -22,23 +22,15 @@ export default async function HomePage() {
           sizes="100vw"
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-ink/55 via-transparent to-ink/10" />
-        <h1 className="sr-only">The Beehive</h1>
-        <div className="absolute inset-0 z-20 flex items-center justify-center px-6">
-          <div className="flex h-56 w-56 items-center justify-center rounded-full bg-black shadow-2xl sm:h-72 sm:w-72">
-            <Image
-              src="/beehive-logo-white.png"
-              alt=""
-              width={260}
-              height={235}
-              className="h-40 w-auto sm:h-52"
-              priority
-            />
-          </div>
-        </div>
         <div className="absolute inset-x-0 bottom-0 z-20 flex flex-col items-center px-4 pb-8 text-center sm:pb-10">
-          <p className="text-sm tracking-[0.28em] text-cream/90 uppercase">
-            Award-winning · Eaton, Norwich · since 1892
-          </p>
+          <div className="w-full max-w-xl rounded-3xl bg-ink/45 px-6 py-8 backdrop-blur-md sm:px-10">
+            <h1 className="font-display text-5xl leading-none text-cream sm:text-6xl">
+              The Beehive
+            </h1>
+            <p className="mt-4 text-sm tracking-[0.28em] text-cream/90 uppercase">
+              Award-winning · Eaton, Norwich · since 1892
+            </p>
+          </div>
           <a
             href="#welcome"
             className="mt-5 inline-flex h-14 w-14 items-center justify-center rounded-full border border-cream/70 text-cream transition hover:bg-cream hover:text-ink"
@@ -64,7 +56,16 @@ export default async function HomePage() {
         id="welcome"
         className="mx-auto max-w-3xl scroll-mt-24 px-4 py-20 text-center sm:px-6"
       >
-        <SectionHeading eyebrow="Welcome">Welcome</SectionHeading>
+        <div className="mx-auto mb-8 flex h-36 w-36 items-center justify-center overflow-hidden rounded-full bg-black p-2 sm:h-44 sm:w-44 sm:p-2.5">
+          <Image
+            src="/logo/beehive-logo.png"
+            alt=""
+            width={260}
+            height={235}
+            className="h-auto w-full translate-y-1.5"
+          />
+        </div>
+        <SectionHeading>Welcome</SectionHeading>
         <p className="mt-8 text-lg leading-8 text-muted">
           An award-winning traditional English real ale pub that has been
           trading in Norwich since 1892.
