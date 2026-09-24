@@ -3,7 +3,7 @@
     {
       "id": "pizza",
       "title": "Friday pizza",
-      "detail": "Tiago’s Pizza, 4:30–9pm. Eat in or takeaway."
+      "detail": "Tiago’s Pizza, 5–9pm. Eat in or takeaway."
     },
     {
       "id": "quiz",
@@ -29,7 +29,7 @@
     "notes": "Ask at the bar or check What’s On for the next date."
   },
   "food": {
-    "fridayPizza": "Tiago’s Pizza van is here every Friday, 4:30–9pm. Eat in or takeaway.",
+    "fridayPizza": "Tiago’s Pizza is here every Friday, 5–9pm. Eat in or takeaway.",
     "roasts": "Sunday roasts from April 2026."
   },
   "hours": [
