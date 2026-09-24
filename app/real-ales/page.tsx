@@ -89,13 +89,13 @@ export default async function RealAlesPage() {
         </p>
         <ul className="mt-8 grid gap-4 sm:grid-cols-2">
           {BREWERIES.map((brewery) => (
-            <li key={brewery.name} className="rounded-2xl bg-cream-dark p-6">
-              <div className="relative mb-4 h-24">
+            <li key={brewery.name} className="rounded-2xl bg-cream-dark p-6 text-center">
+              <div className="relative mx-auto mb-4 h-24">
                 <Image
                   src={brewery.logo}
                   alt=""
                   fill
-                  className="object-contain object-left"
+                  className="object-contain object-center"
                   sizes="320px"
                 />
               </div>
