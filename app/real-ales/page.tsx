@@ -7,28 +7,28 @@ export const dynamic = "force-dynamic";
 
 const BREWERIES = [
   {
-    name: "Green Jack Brewing",
-    note: "Norfolk heritage brewing, including our house bitter — Green Jack Golden Best",
+    name: "Humpty Dumpty",
+    note: "Reedham brewery on the Norfolk Broads, brewing cask ales since 1998.",
   },
   {
-    name: "Dark Star Brewing",
-    note: "Sussex-based brewers crafting innovative, well-respected ales",
+    name: "Adnams",
+    note: "Southwold’s brewery, a Suffolk name long found in East Anglian pubs.",
   },
   {
-    name: "Nethergate Brewery",
-    note: "Suffolk brewers bringing regional character to every pint",
+    name: "Winter’s",
+    note: "A Norwich family brewery, pouring local ales from the edge of the city.",
   },
   {
-    name: "Oakham Ales",
-    note: "Rutland’s finest, delivering consistent quality and flavour",
+    name: "Wolf",
+    note: "Norfolk ales from Besthorpe, near Attleborough, since 1995.",
   },
   {
-    name: "Thornbridge Brewery",
-    note: "Yorkshire craft brewers with a reputation for excellence",
+    name: "Green Jack",
+    note: "Lowestoft brewers, including our house bitter — Green Jack Golden Best.",
   },
   {
-    name: "& Many More",
-    note: "Rotating selection supports micro-breweries far and wide",
+    name: "Chalk Hill",
+    note: "Norwich’s long-running independent brewery, on Rosary Road.",
   },
 ];
 
