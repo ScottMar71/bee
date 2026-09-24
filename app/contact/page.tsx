@@ -14,7 +14,11 @@ export default async function ContactPage() {
 
   return (
     <main id="main">
-      <PageHero title="Contact" image="/photos/exterior-corner.jpg">
+      <PageHero
+        title="Contact"
+        image="/photos/hero-leopold-2.jpg"
+        imageClassName="object-cover object-center"
+      >
         An award-winning real ale pub on Leopold Road, Eaton — halfway between
         Unthank Road and Newmarket Road.
       </PageHero>

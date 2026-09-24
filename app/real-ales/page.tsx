@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { getSite } from "@/lib/site";
@@ -9,26 +10,32 @@ export const dynamic = "force-dynamic";
 const BREWERIES = [
   {
     name: "Humpty Dumpty",
+    logo: "/logos/humpty-dumpty.png",
     note: "Reedham brewery on the Norfolk Broads, brewing cask ales since 1998.",
   },
   {
     name: "Adnams",
+    logo: "/logos/adnams.png",
     note: "Southwold’s brewery, a Suffolk name long found in East Anglian pubs.",
   },
   {
     name: "Winter’s",
+    logo: "/logos/winters.png",
     note: "A Norwich family brewery, pouring local ales from the edge of the city.",
   },
   {
     name: "Wolf",
+    logo: "/logos/wolf.png",
     note: "Norfolk ales from Besthorpe, near Attleborough, since 1995.",
   },
   {
     name: "Green Jack",
+    logo: "/logos/green-jack.png",
     note: "Lowestoft brewers, including our house bitter — Green Jack Golden Best.",
   },
   {
     name: "Chalk Hill",
+    logo: "/logos/chalk-hill.png",
     note: "Norwich’s long-running independent brewery, on Rosary Road.",
   },
 ];
@@ -83,6 +90,15 @@ export default async function RealAlesPage() {
         <ul className="mt-8 grid gap-4 sm:grid-cols-2">
           {BREWERIES.map((brewery) => (
             <li key={brewery.name} className="rounded-2xl bg-cream-dark p-6">
+              <div className="relative mb-4 h-24">
+                <Image
+                  src={brewery.logo}
+                  alt=""
+                  fill
+                  className="object-contain object-left"
+                  sizes="320px"
+                />
+              </div>
               <h3 className="font-display text-2xl">{brewery.name}</h3>
               <p className="mt-2 text-muted">{brewery.note}</p>
             </li>
