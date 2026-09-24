@@ -37,7 +37,6 @@ function thumbFrame(el: HTMLElement): Frame {
 
 export function GalleryGrid({ items }: { items: GalleryItem[] }) {
   const tiles = useRef<(HTMLLIElement | null)[]>([]);
-  const captions = useRef<(HTMLSpanElement | null)[]>([]);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const opener = useRef<HTMLButtonElement | null>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
@@ -82,10 +81,6 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
         );
         const drift = IMAGE_DRIFT[index % IMAGE_DRIFT.length];
         tile.style.transform = `translate3d(0, ${(delta * drift).toFixed(2)}px, 0)`;
-        const caption = captions.current[index];
-        if (caption) {
-          caption.style.transform = `translate3d(0, ${(delta * (3 - drift)).toFixed(2)}px, 0)`;
-        }
       });
     };
 
@@ -333,20 +328,10 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
                   className="gallery-zoom object-cover"
                 />
                 <span className="pointer-events-none absolute inset-0 bg-ink/0 transition duration-500 group-hover:bg-ink/40 group-focus-visible:bg-ink/40" />
-                <span aria-hidden="true" className="pointer-events-none absolute inset-0 flex items-center justify-center gap-2 text-cream opacity-0 transition duration-500 group-hover:opacity-100 group-focus-visible:opacity-100">
+                <span aria-hidden="true" className="pointer-events-none absolute inset-0 flex items-center justify-center text-cream opacity-0 transition duration-500 group-hover:opacity-100 group-focus-visible:opacity-100">
                   <span className="grid h-9 w-9 place-items-center rounded-full border border-cream/80 text-lg leading-none">
                     +
                   </span>
-                  <span className="text-sm tracking-wide">View</span>
-                </span>
-                <span
-                  ref={(node) => {
-                    captions.current[index] = node;
-                  }}
-                  aria-hidden="true"
-                  className="gallery-caption absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/75 via-ink/20 to-transparent px-4 pt-12 pb-4 text-sm text-cream opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100"
-                >
-                  {item.alt}
                 </span>
               </span>
             </button>
