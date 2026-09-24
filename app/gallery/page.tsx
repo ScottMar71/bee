@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
 import { getSite } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Gallery" };
@@ -15,6 +16,7 @@ export default async function GalleryPage() {
         Life at an award-winning Eaton local — the pub, garden, bar and
         community events.
       </PageHero>
+      <Reveal>
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         {gallery.length === 0 ? (
           <p className="text-center text-lg text-muted">
@@ -47,6 +49,7 @@ export default async function GalleryPage() {
           </ul>
         )}
       </section>
+      </Reveal>
     </main>
   );
 }

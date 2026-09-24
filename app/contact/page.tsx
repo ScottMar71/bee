@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { HoursList } from "@/components/HoursList";
 import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
 import { getSite, mapEmbedUrl } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Contact" };
@@ -18,6 +19,7 @@ export default async function ContactPage() {
         Unthank Road and Newmarket Road.
       </PageHero>
       <section className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2">
+        <Reveal>
         <div>
           <h2 className="font-display text-3xl">Address</h2>
           <address className="mt-4 not-italic text-lg leading-8 text-muted">
@@ -49,6 +51,8 @@ export default async function ContactPage() {
             <HoursList hours={site.hours} />
           </div>
         </div>
+        </Reveal>
+        <Reveal delay={100}>
         <div>
           <div className="overflow-hidden rounded-2xl border border-ink/10 bg-cream-dark">
             <iframe
@@ -70,7 +74,9 @@ export default async function ContactPage() {
             </a>
           </p>
         </div>
+        </Reveal>
       </section>
+      <Reveal>
       <section className="bg-cream-dark py-16">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">
           <h2 className="font-display text-4xl">Send a message</h2>
@@ -82,6 +88,7 @@ export default async function ContactPage() {
           </div>
         </div>
       </section>
+      </Reveal>
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
 import { getSite } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Real Ales" };
@@ -46,6 +47,7 @@ export default async function RealAlesPage() {
         cider and bottled Belgian beers.
       </PageHero>
 
+      <Reveal>
       <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <h2 className="font-display text-4xl">Our Real Ale Selection</h2>
         <p className="mt-6 text-lg leading-8 text-muted">
@@ -87,7 +89,9 @@ export default async function RealAlesPage() {
           ))}
         </ul>
       </article>
+      </Reveal>
 
+      <Reveal>
       <section className="bg-cream-dark py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="font-display text-center text-4xl">On the bar now</h2>
@@ -111,6 +115,7 @@ export default async function RealAlesPage() {
           )}
         </div>
       </section>
+      </Reveal>
     </main>
   );
 }

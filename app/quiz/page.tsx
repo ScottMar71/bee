@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
 import { getSite } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Quiz" };
@@ -12,10 +13,15 @@ export default async function QuizPage() {
 
   return (
     <main id="main">
-      <PageHero title="Quiz Night at The Beehive" image="/photos/interior-snug-logo-mirror.jpg">
+      <PageHero
+        title="Quiz Night at The Beehive"
+        image="/photos/interior-snug-logo-mirror.jpg"
+        imageClassName="object-cover object-[center_10%]"
+      >
         Put your general knowledge to the test every week at The Beehive.
       </PageHero>
 
+      <Reveal>
       <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <p className="text-lg leading-8 text-muted">
           Join us for our regular quiz night — a relaxed, friendly evening of
@@ -49,7 +55,9 @@ export default async function QuizPage() {
           glory.
         </p>
       </article>
+      </Reveal>
 
+      <Reveal>
       <section className="bg-cream-dark py-16">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 className="font-display text-4xl">When is the next quiz?</h2>
@@ -82,6 +90,7 @@ export default async function QuizPage() {
           </p>
         </div>
       </section>
+      </Reveal>
     </main>
   );
 }

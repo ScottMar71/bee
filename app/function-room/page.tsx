@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
 import { getSite } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Function Room" };
@@ -17,6 +18,7 @@ export default async function FunctionRoomPage() {
         A flexible space for parties, gatherings, meetings and more.
       </PageHero>
 
+      <Reveal>
       <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <p className="text-lg leading-8 text-muted">
           Located on the first floor of The Beehive, our function room is a
@@ -39,7 +41,9 @@ export default async function FunctionRoomPage() {
           customers and a great place to discover something new.
         </p>
       </article>
+      </Reveal>
 
+      <Reveal>
       <section className="bg-cream-dark py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="font-display text-4xl">A space for your occasion</h2>
@@ -60,13 +64,14 @@ export default async function FunctionRoomPage() {
           <div className="mt-10">
             <a
               href={`mailto:${site.contact.email}?subject=Function room enquiry`}
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-brick px-7 text-base font-semibold text-cream hover:bg-brick-dark"
+              className="cta inline-flex min-h-12 items-center justify-center rounded-full bg-brick px-7 text-base font-semibold text-cream shadow-sm hover:bg-brick-dark hover:shadow"
             >
               Enquire by email
             </a>
           </div>
         </div>
       </section>
+      </Reveal>
     </main>
   );
 }

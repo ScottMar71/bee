@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = { title: "History" };
 
@@ -15,6 +16,7 @@ export default function HistoryPage() {
         An award-winning Victorian local on Leopold Road, Eaton.
       </PageHero>
 
+      <Reveal>
       <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <p className="text-lg leading-8 text-muted">
           Its journey from a corner shop to a thriving modern pub reflects both
@@ -195,6 +197,7 @@ export default function HistoryPage() {
           Sunday roasts are available from April 2026.
         </p>
       </article>
+      </Reveal>
     </main>
   );
 }

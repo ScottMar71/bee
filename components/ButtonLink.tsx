@@ -19,7 +19,7 @@ export function ButtonLink({ href, children, variant = "primary" }: Props) {
   return (
     <Link
       href={href}
-      className={`inline-flex min-h-12 items-center justify-center rounded-full px-7 text-base font-semibold tracking-wide transition ${styles}`}
+      className={`cta inline-flex min-h-12 items-center justify-center rounded-full px-7 text-base font-semibold tracking-wide shadow-sm hover:shadow ${styles}`}
     >
       {children}
     </Link>
