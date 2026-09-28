@@ -3,6 +3,7 @@ export const NAV = [
   { href: "/real-ales", label: "Real Ales" },
   { href: "/quiz", label: "Quiz" },
   { href: "/food", label: "Food" },
+  { href: "/festival", label: "Festival" },
   { href: "/function-room", label: "Function Room" },
   { href: "/gallery", label: "Gallery" },
   { href: "/history", label: "History" },
