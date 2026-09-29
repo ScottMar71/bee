@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { pageMetadata } from "@/lib/seo";
 import { getSite } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Real Ales" };
+export const metadata: Metadata = pageMetadata({
+  title: "Real Ales",
+  description:
+    "Cask ales from Norfolk and Suffolk breweries at The Beehive, an award-winning pub in Eaton, Norwich.",
+  path: "/real-ales",
+});
 export const dynamic = "force-dynamic";
 
 const BREWERIES = [

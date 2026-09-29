@@ -4,6 +4,7 @@ import { Fraunces, Source_Sans_3 } from "next/font/google";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { DEFAULT_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/seo";
 import { getSite } from "@/lib/site";
 import "./globals.css";
 
@@ -18,12 +19,33 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "The Beehive | Real Ale Pub in Eaton, Norwich",
     template: "%s | The Beehive Norwich",
   },
-  description:
-    "An award-winning traditional English real ale pub in Eaton, Norwich, since 1892. Friendly local, function room, quiz nights and Friday pizza.",
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  openGraph: {
+    title: "The Beehive | Real Ale Pub in Eaton, Norwich",
+    description: DEFAULT_DESCRIPTION,
+    url: "/",
+    siteName: SITE_NAME,
+    locale: "en_GB",
+    type: "website",
+    images: [
+      {
+        url: "/photos/hero-leopold-2.jpg",
+        alt: "The Beehive pub on Leopold Road, Norwich",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Beehive | Real Ale Pub in Eaton, Norwich",
+    description: DEFAULT_DESCRIPTION,
+    images: ["/photos/hero-leopold-2.jpg"],
+  },
 };
 
 export default async function RootLayout({

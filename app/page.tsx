@@ -2,9 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
 import { HoursList } from "@/components/HoursList";
+import { PubJsonLd } from "@/components/PubJsonLd";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
+import { DEFAULT_DESCRIPTION, pageMetadata } from "@/lib/seo";
 import { getSite } from "@/lib/site";
+
+export const metadata = pageMetadata({
+  title: "The Beehive | Real Ale Pub in Eaton, Norwich",
+  description: DEFAULT_DESCRIPTION,
+  path: "/",
+  absoluteTitle: true,
+});
 
 export const dynamic = "force-dynamic";
 
@@ -13,6 +22,7 @@ export default async function HomePage() {
 
   return (
     <main id="main">
+      <PubJsonLd site={site} />
       <section className="relative isolate min-h-[88vh] overflow-hidden">
         <Image
           src="/photos/hero-leopold-2.jpg"

@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { pageMetadata } from "@/lib/seo";
 import { getSite } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Function Room" };
+export const metadata: Metadata = pageMetadata({
+  title: "Function Room",
+  description:
+    "Hire the upstairs function room at The Beehive, Eaton, for parties, clubs, societies and meetings.",
+  path: "/function-room",
+});
 export const dynamic = "force-dynamic";
 
 export default async function FunctionRoomPage() {

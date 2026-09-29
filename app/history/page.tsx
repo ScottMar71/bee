@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "History" };
+export const metadata: Metadata = pageMetadata({
+  title: "History",
+  description:
+    "The story of The Beehive, a Victorian pub on Leopold Road in Eaton, Norwich, trading since the 1890s.",
+  path: "/history",
+});
 
 export default function HistoryPage() {
   return (

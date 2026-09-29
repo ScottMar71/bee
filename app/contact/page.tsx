@@ -4,9 +4,15 @@ import { HoursList } from "@/components/HoursList";
 import { MapEmbed } from "@/components/MapEmbed";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { pageMetadata } from "@/lib/seo";
 import { getSite, mapEmbedUrl } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Contact" };
+export const metadata: Metadata = pageMetadata({
+  title: "Contact",
+  description:
+    "Find The Beehive at 30 Leopold Road, Norwich NR4 7PJ. Opening hours, map and contact details.",
+  path: "/contact",
+});
 export const dynamic = "force-dynamic";
 
 export default async function ContactPage() {

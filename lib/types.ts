@@ -42,6 +42,7 @@ export type SiteContent = {
   socials: {
     facebook: string;
     twitter: string;
+    instagram: string;
     camra: string;
   };
   gallery: GalleryItem[];

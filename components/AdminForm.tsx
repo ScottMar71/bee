@@ -262,6 +262,13 @@ export function AdminForm({ initial }: { initial: SiteContent }) {
           }
         />
         <Field
+          label="Instagram URL"
+          value={site.socials.instagram ?? ""}
+          onChange={(instagram) =>
+            setSite((s) => ({ ...s, socials: { ...s.socials, instagram } }))
+          }
+        />
+        <Field
           label="CAMRA URL"
           value={site.socials.camra}
           onChange={(camra) =>

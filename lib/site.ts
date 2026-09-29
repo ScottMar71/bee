@@ -7,7 +7,9 @@ const SITE_PATH = path.join(process.cwd(), "content", "site.json");
 
 export async function getSite(): Promise<SiteContent> {
   const raw = await fs.readFile(SITE_PATH, "utf8");
-  return JSON.parse(raw) as SiteContent;
+  const site = JSON.parse(raw) as SiteContent;
+  site.socials.instagram ??= "";
+  return site;
 }
 
 export async function saveSite(

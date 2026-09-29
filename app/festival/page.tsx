@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { pageMetadata } from "@/lib/seo";
 
 const FESTIVAL_PHOTOS = [
   {
@@ -14,7 +15,12 @@ const FESTIVAL_PHOTOS = [
   },
 ];
 
-export const metadata: Metadata = { title: "Beer Festival" };
+export const metadata: Metadata = pageMetadata({
+  title: "Beer Festival",
+  description:
+    "The Beehive Beer Festival in Eaton, Norwich: a summer of local and national cask ales at a Victorian pub.",
+  path: "/festival",
+});
 
 export default function FestivalPage() {
   return (

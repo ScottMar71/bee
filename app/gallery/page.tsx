@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { pageMetadata } from "@/lib/seo";
 import { getSite } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Gallery" };
+export const metadata: Metadata = pageMetadata({
+  title: "Gallery",
+  description:
+    "Photos of The Beehive in Eaton, Norwich — the bar, beer garden, real ale and community events.",
+  path: "/gallery",
+});
 export const dynamic = "force-dynamic";
 
 export default async function GalleryPage() {

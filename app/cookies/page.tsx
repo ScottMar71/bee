@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import { CookieSettingsButton } from "@/components/CookieConsent";
+import { pageMetadata } from "@/lib/seo";
 import { getSite } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Cookie policy" };
+export const metadata: Metadata = pageMetadata({
+  title: "Cookie policy",
+  description:
+    "How The Beehive website uses cookies. The site does not use analytics or advertising cookies.",
+  path: "/cookies",
+});
 export const dynamic = "force-dynamic";
 
 export default async function CookiePolicyPage() {

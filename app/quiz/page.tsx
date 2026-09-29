@@ -3,9 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { pageMetadata } from "@/lib/seo";
 import { getSite } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Quiz" };
+export const metadata: Metadata = pageMetadata({
+  title: "Quiz",
+  description:
+    "Weekly quiz night at The Beehive in Eaton, Norwich. A friendly evening of questions, drinks and a bit of competition.",
+  path: "/quiz",
+});
 export const dynamic = "force-dynamic";
 
 export default async function QuizPage() {

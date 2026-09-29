@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { pageMetadata } from "@/lib/seo";
 
 const SUNDAY_PHOTOS = [
   {
@@ -22,7 +23,12 @@ const SUNDAY_PHOTOS = [
   },
 ];
 
-export const metadata: Metadata = { title: "Food" };
+export const metadata: Metadata = pageMetadata({
+  title: "Food",
+  description:
+    "Friday pizza from 5–9pm and Sunday roasts at The Beehive, an award-winning real ale pub in Eaton, Norwich.",
+  path: "/food",
+});
 
 export default function FoodPage() {
 

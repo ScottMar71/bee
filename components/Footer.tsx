@@ -5,7 +5,7 @@ import type { SiteContent } from "@/lib/types";
 import { NAV } from "@/lib/nav";
 
 export function Footer({ site }: { site: SiteContent }) {
-  const { facebook, twitter, camra } = site.socials;
+  const { facebook, twitter, instagram, camra } = site.socials;
 
   return (
     <footer className="mt-auto border-t border-ink/10 bg-cream">
@@ -40,6 +40,17 @@ export function Footer({ site }: { site: SiteContent }) {
                 className="inline-flex h-11 w-11 items-center justify-center rounded-full text-ink transition hover:bg-ink/5 hover:text-brick"
               >
                 <TwitterIcon />
+              </a>
+            ) : null}
+            {instagram ? (
+              <a
+                href={instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="The Beehive on Instagram"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full text-ink transition hover:bg-ink/5 hover:text-brick"
+              >
+                <InstagramIcon />
               </a>
             ) : null}
             {camra ? (
@@ -108,6 +119,14 @@ function FacebookIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden>
       <path d="M22 12.07A10 10 0 1 0 10.44 21.9v-6.94H7.9v-2.89h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.89h-2.34v6.94A10 10 0 0 0 22 12.07" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden>
+      <path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-3.2 1.7-4.8 4.9-4.9 1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z" />
     </svg>
   );
 }
