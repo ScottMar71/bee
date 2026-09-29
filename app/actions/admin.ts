@@ -5,7 +5,7 @@ import path from "path";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { isAdmin, login, logout } from "@/lib/auth";
-import { commitFiles, deleteGithubFile } from "@/lib/github";
+import { commitFiles, deleteGithubFile, readRepoFile } from "@/lib/github";
 import { getSite, saveSite } from "@/lib/site";
 import type { SiteContent } from "@/lib/types";
 
@@ -37,6 +37,33 @@ export async function loginAction(formData: FormData) {
 export async function logoutAction() {
   await logout();
   redirect("/admin/login");
+}
+
+async function latestSite() {
+  if (process.env.GITHUB_TOKEN) {
+    return JSON.parse(await readRepoFile("content/site.json")) as SiteContent;
+  }
+  return getSite();
+}
+
+export async function setMaintenanceAction(on: boolean): Promise<AdminResult> {
+  if (!(await assertAdmin())) {
+    return { ok: false, error: "Please log in again." };
+  }
+  try {
+    const site = await latestSite();
+    site.maintenance = on;
+    await saveSite(
+      site,
+      on
+        ? "Switch the website to maintenance"
+        : "Switch the website back on",
+    );
+    revalidatePath("/", "layout");
+    return { ok: true };
+  } catch (error) {
+    return resultError(error);
+  }
 }
 
 export async function saveSiteAction(site: SiteContent): Promise<AdminResult> {

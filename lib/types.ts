@@ -17,6 +17,7 @@ export type GalleryItem = {
 };
 
 export type SiteContent = {
+  maintenance: boolean;
   whatsOn: WhatsOnItem[];
   ales: Ale[];
   quiz: {

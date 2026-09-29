@@ -5,6 +5,7 @@ import {
   deletePhotoAction,
   logoutAction,
   saveSiteAction,
+  setMaintenanceAction,
   uploadPhotoAction,
 } from "@/app/actions/admin";
 import type { Ale, SiteContent, WhatsOnItem } from "@/lib/types";
@@ -14,7 +15,10 @@ function newId() {
 }
 
 export function AdminForm({ initial }: { initial: SiteContent }) {
-  const [site, setSite] = useState(initial);
+  const [site, setSite] = useState({
+    ...initial,
+    maintenance: initial.maintenance === true,
+  });
   const [status, setStatus] = useState("");
   const [busy, setBusy] = useState(false);
 
@@ -44,6 +48,24 @@ export function AdminForm({ initial }: { initial: SiteContent }) {
             Log out
           </button>
         </form>
+      </div>
+
+      <div className="rounded-2xl bg-cream-dark px-5 py-4">
+        <p>
+          {site.maintenance
+            ? "The public website is showing the maintenance page."
+            : "The public website is open."}
+        </p>
+        <button
+          type="button"
+          disabled={busy}
+          onClick={switchMaintenance}
+          className="mt-2 text-brick underline underline-offset-2 hover:text-brick-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brick disabled:opacity-60"
+        >
+          {site.maintenance
+            ? "Switch maintenance off"
+            : "Switch maintenance on"}
+        </button>
       </div>
 
       <Section title="What’s on">
@@ -335,6 +357,31 @@ export function AdminForm({ initial }: { initial: SiteContent }) {
       </Section>
     </div>
   );
+
+  async function switchMaintenance() {
+    const on = !site.maintenance;
+    setBusy(true);
+    setStatus("");
+    setSite((current) => ({ ...current, maintenance: on }));
+    try {
+      const result = await setMaintenanceAction(on);
+      setStatus(
+        result.ok
+          ? on
+            ? "Maintenance is on. Visitors will see it shortly."
+            : "Maintenance is off. The website is open."
+          : result.error,
+      );
+      if (!result.ok) {
+        setSite((current) => ({ ...current, maintenance: !on }));
+      }
+    } catch (error) {
+      setSite((current) => ({ ...current, maintenance: !on }));
+      setStatus(error instanceof Error ? error.message : "Could not save.");
+    } finally {
+      setBusy(false);
+    }
+  }
 
   function patchList(
     key: "whatsOn",

@@ -60,6 +60,26 @@ export async function commitFiles(files: FileChange[], message: string) {
   }
 }
 
+export async function readRepoFile(filePath: string): Promise<string> {
+  const { token, repo, branch } = repoConfig();
+  const res = await fetch(
+    `https://api.github.com/repos/${repo}/contents/${filePath}?ref=${branch}`,
+    {
+      headers: {
+        Accept: "application/vnd.github.raw",
+        Authorization: `Bearer ${token}`,
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "beehive-pub",
+      },
+      cache: "no-store",
+    },
+  );
+  if (!res.ok) {
+    throw new Error(`GitHub ${res.status}`);
+  }
+  return res.text();
+}
+
 export async function deleteGithubFile(filePath: string, message: string) {
   const { repo, branch } = repoConfig();
   const url = `https://api.github.com/repos/${repo}/contents/${filePath}`;

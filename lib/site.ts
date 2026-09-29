@@ -10,13 +10,16 @@ export async function getSite(): Promise<SiteContent> {
   return JSON.parse(raw) as SiteContent;
 }
 
-export async function saveSite(site: SiteContent) {
+export async function saveSite(
+  site: SiteContent,
+  message = "Update what’s on at The Beehive",
+) {
   const json = `${JSON.stringify(site, null, 2)}\n`;
 
   if (process.env.GITHUB_TOKEN) {
     await commitFiles(
       [{ path: "content/site.json", content: json }],
-      "Update what’s on at The Beehive",
+      message,
     );
     return;
   }

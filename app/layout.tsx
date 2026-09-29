@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Fraunces, Source_Sans_3 } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -29,7 +30,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const site = await getSite();
+  const bare = (await headers()).get("x-beehive-maintenance") === "1";
+  const site = bare ? null : await getSite();
 
   return (
     <html
@@ -38,9 +40,15 @@ export default async function RootLayout({
       className={`${sourceSans.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-cream font-sans text-ink">
-        <Header />
-        {children}
-        <Footer site={site} />
+        {bare ? (
+          children
+        ) : (
+          <>
+            <Header />
+            {children}
+            <Footer site={site!} />
+          </>
+        )}
       </body>
     </html>
   );
