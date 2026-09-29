@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { CookieConsent } from "@/components/CookieConsent";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { getSite } from "@/lib/site";
@@ -47,6 +48,7 @@ export default async function RootLayout({
             <Header />
             {children}
             <Footer site={site!} />
+            <CookieConsent />
           </>
         )}
       </body>

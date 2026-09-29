@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { HoursList } from "@/components/HoursList";
+import { MapEmbed } from "@/components/MapEmbed";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { getSite, mapEmbedUrl } from "@/lib/site";
@@ -59,13 +60,7 @@ export default async function ContactPage() {
         <Reveal delay={100}>
         <div>
           <div className="overflow-hidden rounded-2xl border border-ink/10 bg-cream-dark">
-            <iframe
-              title="Map of The Beehive, Leopold Road, Norwich"
-              src={mapSrc}
-              className="h-[420px] w-full"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            <MapEmbed src={mapSrc} />
           </div>
           <p className="mt-3 text-sm">
             <a

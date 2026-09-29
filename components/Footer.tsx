@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CookieSettingsButton } from "@/components/CookieConsent";
 import type { SiteContent } from "@/lib/types";
 import { NAV } from "@/lib/nav";
 
@@ -87,9 +88,18 @@ export function Footer({ site }: { site: SiteContent }) {
           </ul>
         </div>
       </div>
-      <p className="border-t border-ink/10 px-4 py-4 text-center text-xs text-muted">
-        The Beehive Freehouse, Eaton, Norwich
-      </p>
+      <div className="border-t border-ink/10 px-4 py-4 text-center text-xs text-muted">
+        <p>The Beehive Freehouse, Eaton, Norwich</p>
+        <p className="mt-1 flex flex-wrap items-center justify-center gap-x-4">
+          <CookieSettingsButton />
+          <Link
+            href="/cookies"
+            className="inline-flex min-h-11 items-center underline underline-offset-2 hover:text-brick focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brick"
+          >
+            Cookie policy
+          </Link>
+        </p>
+      </div>
     </footer>
   );
 }
