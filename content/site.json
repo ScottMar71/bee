@@ -10,6 +10,11 @@
       "id": "quiz",
       "title": "Quiz nights",
       "detail": "Regular quiz nights. Ask at the bar for the next date."
+    },
+    {
+      "id": "1790761225174-ywk7j",
+      "title": "Curry Night",
+      "detail": "its back"
     }
   ],
   "ales": [],
@@ -68,7 +73,7 @@
   "socials": {
     "facebook": "https://www.facebook.com/The-Beehive-Pub-Norwich-113272725363598/",
     "twitter": "https://twitter.com/beehivenorwich",
-    "instagram": "https://www.instagram.com/beehivenorwich",
+    "instagram": "@beehivenorwich",
     "camra": "https://norwich.camra.org.uk/"
   },
   "gallery": [
