@@ -1,7 +1,6 @@
 "use server";
 
 import { Resend } from "resend";
-import { getSite } from "@/lib/site";
 
 export type ContactState = {
   ok: boolean;
@@ -15,6 +14,14 @@ export type ContactState = {
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const INBOX = "beehivephnorwich@gmail.com";
+
+function sendingDomain() {
+  return (process.env.RESEND_EMAIL_DOMAIN || "beehivepubnorwich.co.uk").replaceAll(
+    '"',
+    "",
+  );
+}
 
 export async function sendContactAction(
   _prev: ContactState,
@@ -48,100 +55,47 @@ export async function sendContactAction(
     return { ok: false, error: "That message is a bit too long.", values };
   }
 
-  const site = await getSite();
-  const to = process.env.CONTACT_TO || site.contact.email;
-
   try {
-    if (process.env.RESEND_API_KEY) {
-      await sendWithResend({ to, name, email, phone, message });
-    } else {
-      await sendWithFormSubmit({ to, name, email, phone, message });
-    }
+    await sendWithResend({ name, email, phone, message });
     return { ok: true };
   } catch (error) {
-    const detail = error instanceof Error ? error.message : "";
-    if (detail.includes("activate")) {
-      return {
-        ok: false,
-        error:
-          "The first message needs a one-time confirmation. Please check the inbox and try again.",
-        values,
-      };
-    }
+    console.error("Contact form send failed", error);
     return {
       ok: false,
-      error: "Sorry — the message could not be sent. Please try emailing us directly.",
+      error:
+        "Sorry — the message could not be sent. Please try emailing us directly.",
       values,
     };
   }
 }
 
 async function sendWithResend({
-  to,
   name,
   email,
   phone,
   message,
 }: {
-  to: string;
   name: string;
   email: string;
   phone: string;
   message: string;
 }) {
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error("RESEND_API_KEY is not set");
+  }
+
   const resend = new Resend(process.env.RESEND_API_KEY);
   const from =
-    process.env.CONTACT_FROM || "The Beehive <onboarding@resend.dev>";
+    process.env.CONTACT_FROM || `The Beehive <enquiries@${sendingDomain()}>`;
   const { error } = await resend.emails.send({
     from,
-    to,
+    to: [INBOX],
     replyTo: email,
     subject: `Website enquiry from ${name}`,
     text: formatText({ name, email, phone, message }),
     html: formatHtml({ name, email, phone, message }),
   });
   if (error) throw new Error(error.message);
-}
-
-async function sendWithFormSubmit({
-  to,
-  name,
-  email,
-  phone,
-  message,
-}: {
-  to: string;
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-}) {
-  const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify({
-      name,
-      email,
-      phone: phone || "Not given",
-      message,
-      _subject: `Website enquiry from ${name}`,
-      _replyto: email,
-      _template: "table",
-      _captcha: "false",
-    }),
-  });
-
-  const payload = (await response.json().catch(() => null)) as {
-    success?: string | boolean;
-    message?: string;
-  } | null;
-
-  if (!response.ok || payload?.success === "false" || payload?.success === false) {
-    throw new Error(payload?.message || "FormSubmit request failed.");
-  }
 }
 
 function formatText({
