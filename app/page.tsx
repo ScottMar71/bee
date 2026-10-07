@@ -25,11 +25,11 @@ export default async function HomePage() {
       <PubJsonLd site={site} />
       <section className="relative isolate min-h-[88vh] overflow-hidden">
         <Image
-          src="/photos/hero-leopold-2.jpg"
+          src="/photos/hero-leopold-sunny.jpg"
           alt="The Beehive pub on Leopold Road, Norwich"
           fill
           priority
-          className="hero-zoom z-0 object-cover object-center"
+          className="hero-zoom z-0 object-cover object-[center_38%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-ink/55 via-transparent to-ink/10" />
