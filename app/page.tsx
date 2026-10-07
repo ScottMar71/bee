@@ -38,8 +38,11 @@ export default async function HomePage() {
             <h1 className="hero-rise font-display text-5xl leading-none text-cream sm:text-6xl">
               The Beehive
             </h1>
-            <p className="hero-rise hero-rise-2 mt-4 text-sm tracking-[0.28em] text-cream/90 uppercase">
-              Award-winning · Eaton, Norwich · since 1892
+            <p className="hero-rise hero-rise-2 mt-4 text-sm tracking-[0.22em] text-cream/90 uppercase">
+              Real Ale Community Pub
+              <span className="mt-2 block tracking-[0.28em]">
+                Eaton, Norwich · since 1922
+              </span>
             </p>
           </div>
           <a
@@ -84,8 +87,8 @@ export default async function HomePage() {
         <Reveal delay={160}>
           <div>
             <p className="mt-8 text-lg leading-8 text-muted">
-              An award-winning traditional English real ale pub that has been
-              trading in Norwich since 1892.
+              An award-winning traditional real ale pub that has been
+              trading in Norwich since 1922.
             </p>
             <p className="mt-6 text-lg leading-8 text-muted">
               The Beehive Pub in Eaton, Norwich offers a friendly and relaxed
@@ -100,7 +103,7 @@ export default async function HomePage() {
       <section id="whats-on" className="bg-cream-dark py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
-            <SectionHeading eyebrow="This week">What’s on</SectionHeading>
+            <SectionHeading>What’s Happening?</SectionHeading>
           </Reveal>
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {site.whatsOn.map((item, index) => (

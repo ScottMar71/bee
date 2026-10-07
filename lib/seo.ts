@@ -7,7 +7,7 @@ export const SITE_NAME = "The Beehive";
 export const SITE_URL = site.contact.website.replace(/\/$/, "");
 
 export const DEFAULT_DESCRIPTION =
-  "An award-winning traditional English real ale pub in Eaton, Norwich, since 1892. Friendly local, function room, quiz nights and Friday pizza.";
+  "An award-winning traditional real ale pub in Eaton, Norwich, since 1922. Friendly local, function room, quiz nights and Friday pizza.";
 
 const OG_IMAGE = {
   url: "/photos/hero-leopold-2.jpg",

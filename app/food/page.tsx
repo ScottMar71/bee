@@ -26,7 +26,7 @@ const SUNDAY_PHOTOS = [
 export const metadata: Metadata = pageMetadata({
   title: "Food",
   description:
-    "Friday pizza from 5–9pm and Sunday roasts at The Beehive, an award-winning real ale pub in Eaton, Norwich.",
+    "Friday pizza from 4.30pm till 9pm and Sunday roasts at The Beehive, an award-winning real ale pub in Eaton, Norwich.",
   path: "/food",
 });
 
@@ -42,14 +42,14 @@ export default function FoodPage() {
           <article className="grid items-center gap-10 md:grid-cols-2">
             <div>
               <p className="text-xs font-semibold tracking-[0.2em] text-brick uppercase">
-                Every Friday, 5–9pm
+                Every Friday, 4.30pm till 9pm
               </p>
               <h2 className="font-display mt-2 text-4xl">
                 Tiago’s Pizza at The Beehive
               </h2>
               <div className="mt-6 space-y-6 text-lg leading-8 text-muted">
                 <p>
-                  Every Friday from 5–9pm, Tiago’s Pizza takes up residence at
+                  Every Friday from 4.30pm till 9pm, Tiago’s Pizza takes up residence at
                   The Beehive on Leopold Road, bringing a taste of Italy right
                   to our doorstep.
                 </p>

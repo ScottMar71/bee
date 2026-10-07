@@ -13,8 +13,8 @@ export function Footer({ site }: { site: SiteContent }) {
         <div>
           <p className="font-display text-2xl">The Beehive</p>
           <p className="mt-2 text-sm text-muted">
-            An award-winning traditional English real ale pub in Eaton,
-            Norwich, since 1892.
+            An award-winning traditional real ale pub in Eaton,
+            Norwich, since 1922.
           </p>
           <nav
             aria-label="Social"
