@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { pageMetadata } from "@/lib/seo";
@@ -19,7 +20,8 @@ export default async function FunctionRoomPage() {
     <main id="main">
       <PageHero
         title="The Function Room"
-        image="/photos/wine-tasting-cheese.jpg"
+        image="/photos/function-room.jpg"
+        imageClassName="object-cover object-center"
       >
         A flexible space for parties, gatherings, meetings and more.
       </PageHero>
@@ -46,6 +48,17 @@ export default async function FunctionRoomPage() {
           held every three months, making it a familiar space for regular
           customers and a great place to discover something new.
         </p>
+        <figure className="mt-10 overflow-hidden rounded-2xl">
+          <div className="relative aspect-[16/9]">
+            <Image
+              src="/photos/function-room-tables.jpg"
+              alt="Tables, a chalkboard and seating in the upstairs function room"
+              fill
+              className="object-cover object-[center_12%]"
+              sizes="(min-width: 768px) 48rem, 100vw"
+            />
+          </div>
+        </figure>
       </article>
       </Reveal>
 
