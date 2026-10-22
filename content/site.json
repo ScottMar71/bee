@@ -14,14 +14,14 @@
   ],
   "ales": [],
   "quiz": {
-    "intro": "The Beehive hosts regular quiz nights — a friendly evening at this award-winning Eaton local, for regulars and first-timers alike.",
+    "intro": "The Beehive hosts regular quiz nights, once a fortnight, on a Wednesday.  It is a very popular night so booking your team in advance is a must! It is free to enter, a maximum of five per team and starts at 8.30pm sharp! \nOur quiz dates are as follows:\n28th October (2026)\n11th Nov\n25th Nov\n9th Dec\n23rd Dec\n6th Jan (2027)\n20th Jan\n3rd Feb\n17th Feb\n3rd March\n17th March\n31st March\n14th April\n28th April\n12th May\n26th May\n9th June\n23rd June\n7th July\n21st July\n4th Aug\n18th Aug\n1st Sep\n15th Sep\n29th Sep\n13th Oct\n27th Oct\n10th Nov\n24th Nov\n8th Dec\n22nd Dec\n5th Jan (2028)",
     "nextDate": "",
-    "time": "",
-    "notes": "Ask at the bar or check What’s On for the next date."
+    "time": "8.30pm",
+    "notes": "Our next dates are always written on our wall board outside the pub or on a board just inside the front door."
   },
   "food": {
-    "fridayPizza": "Tiago’s Pizza is here every Friday, 4.30pm till 9pm. Eat in or takeaway.",
-    "roasts": "A proper Sunday roast, with all the trimmings."
+    "fridayPizza": "Tiago’s Pizza truck is a traditional Italian wood fired pizza truck and is with us every Friday from  4.30pm till 9pm. You are welcome to eat in he pub with a drink or take away to the comfort of your own home!\nPlease note that all pizza's are handcrafted and cooked to order and on busy nights, wait times can be up to one hour.\nThis is a family run business and regular holidays are taken in the summer holidays, half terms and Easter and Christmas holidays so please check our social media pages for dates they are away",
+    "roasts": "We have teamed up with 'Dish'd' "
   },
   "hours": [
     {
