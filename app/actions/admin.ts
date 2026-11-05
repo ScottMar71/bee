@@ -49,8 +49,8 @@ export async function setMaintenanceAction(on: boolean): Promise<AdminResult> {
     await saveSite(
       site,
       on
-        ? "Switch the website to maintenance"
-        : "Switch the website back on",
+        ? "Show the coming soon page"
+        : "Show the full website",
     );
     revalidatePath("/", "layout");
     return { ok: true };

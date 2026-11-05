@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { maintenanceEnabled } from "@/lib/maintenance";
 
+const INDEX_FILES = new Set(["/robots.txt", "/sitemap.xml"]);
+
 function requestHeaders(request: NextRequest, bare: boolean) {
   const headers = new Headers(request.headers);
   headers.delete("x-beehive-maintenance");
@@ -11,7 +13,7 @@ function requestHeaders(request: NextRequest, bare: boolean) {
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  if (pathname.startsWith("/admin")) {
+  if (pathname.startsWith("/admin") || INDEX_FILES.has(pathname)) {
     return NextResponse.next({
       request: { headers: requestHeaders(request, false) },
     });
@@ -26,15 +28,19 @@ export async function proxy(request: NextRequest) {
   }
 
   const headers = requestHeaders(request, true);
+  const responseHeaders = { "X-Robots-Tag": "noindex, nofollow" };
   if (preview) {
-    return NextResponse.next({ request: { headers } });
+    return NextResponse.next({
+      request: { headers },
+      headers: responseHeaders,
+    });
   }
 
   const url = request.nextUrl.clone();
   url.pathname = "/maintenance";
   return NextResponse.rewrite(url, {
-    status: 503,
     request: { headers },
+    headers: responseHeaders,
   });
 }
 

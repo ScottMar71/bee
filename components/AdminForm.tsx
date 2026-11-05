@@ -53,7 +53,7 @@ export function AdminForm({ initial }: { initial: SiteContent }) {
       <div className="rounded-2xl bg-cream-dark px-5 py-4">
         <p>
           {site.maintenance
-            ? "The public website is showing the maintenance page."
+            ? "The public website is showing the coming soon page."
             : "The public website is open."}
         </p>
         <button
@@ -63,8 +63,8 @@ export function AdminForm({ initial }: { initial: SiteContent }) {
           className="mt-2 text-brick underline underline-offset-2 hover:text-brick-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brick disabled:opacity-60"
         >
           {site.maintenance
-            ? "Switch maintenance off"
-            : "Switch maintenance on"}
+            ? "Show the full website"
+            : "Show the coming soon page"}
         </button>
       </div>
 
@@ -375,8 +375,8 @@ export function AdminForm({ initial }: { initial: SiteContent }) {
       setStatus(
         result.ok
           ? on
-            ? "Maintenance is on. Visitors will see it shortly."
-            : "Maintenance is off. The website is open."
+            ? "Coming soon is on. Visitors will see it shortly."
+            : "Coming soon is off. The website is open."
           : result.error,
       );
       if (!result.ok) {
