@@ -37,14 +37,16 @@ export default async function MaintenancePage() {
       id="main"
       className="mx-auto flex min-h-full w-full max-w-lg flex-1 flex-col px-4 py-16"
     >
-      <Image
-        src="/logo/beehive-logo-ink.png"
-        alt="The Beehive"
-        width={260}
-        height={235}
-        priority
-        className="mx-auto h-auto w-36"
-      />
+      <div className="mx-auto flex h-36 w-36 items-center justify-center overflow-hidden rounded-full bg-black p-2 sm:h-44 sm:w-44 sm:p-2.5">
+        <Image
+          src="/logo/beehive-logo.png"
+          alt=""
+          width={260}
+          height={235}
+          priority
+          className="h-auto w-full translate-y-1.5"
+        />
+      </div>
       <h1 className="font-display mt-8 text-center text-5xl text-ink">
         The Beehive
       </h1>
